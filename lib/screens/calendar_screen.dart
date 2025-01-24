@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:go_router/go_router.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});
@@ -80,11 +81,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          '../assets/logo.png', // Burada logo yolunu belirtmelisiniz.
-          height: 50, // Logonun yüksekliğini ayarlayabilirsiniz.
+          '../assets/logoo.png', // Logo dosyasının doğru yolu
+          height: 40,  // Logonun yüksekliğini ayarlayabilirsiniz
         ),
-        backgroundColor: Colors.white, // AppBar arka plan rengi
-        elevation: 0, // AppBar'ın altındaki gölgeyi kaldırabilirsiniz
+        backgroundColor: Colors.white,  // AppBar'ın arka plan rengini beyaz yapıyoruz
+        elevation: 0,  // AppBar altındaki gölgeyi kaldırıyoruz
       ),
       body: Column(
         children: [
@@ -98,7 +99,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
             eventLoader: _getEventsForDay,
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Colors.pinkAccent, // Bugün günü vurgulamak için
+                color: Colors.grey, // Bugün günü vurgulamak için
                 shape: BoxShape.circle,
               ),
               selectedDecoration: BoxDecoration(
@@ -139,9 +140,38 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ),
         ],
       ),
+      bottomNavigationBar: Container(
+        height: 60,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.home),
+              onPressed: () {
+                // Ana sayfaya git
+                context.go('/home');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.calendar_today),
+              onPressed: () {
+                // Takvim ekranına git
+                context.go('/calendar');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.mood),
+              onPressed: () {
+                // Mood veya başka bir işlev ekleyebilirsiniz
+                print("Mood butonuna tıklandı!");
+              },
+            ),
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addEvent, // Etkinlik ekle butonuna tıklayınca bu fonksiyon çalışacak
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.grey,
         child: const Icon(Icons.add),
       ),
     );
