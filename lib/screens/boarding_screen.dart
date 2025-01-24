@@ -12,17 +12,17 @@ class BoardingScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/happypulse.png', // Görselin doğru yolda olduğundan emin olun
-              width: 450, // Genişlik
-              height: 600, // Yükseklik
+              '../assets/happypulse.png',
+              width: 450,
+              height: 600,
             ),
-            const SizedBox(height: 40), // Görsel ile buton arası boşluk
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                context.go('/home'); // Butona tıklandığında home sayfasına gider
+                context.go('/home');
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple, // Buton rengi
+                backgroundColor: Colors.purple,
                 padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),

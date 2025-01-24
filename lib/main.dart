@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:happypulse/screens/boarding_screen.dart';
 import 'package:happypulse/screens/home_screen.dart';
-import 'package:happypulse/screens/calendar_screen.dart';  // CalendarScreen import edin
+import 'package:happypulse/screens/calendar_screen.dart';
+import 'package:happypulse/screens/mood_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,15 +25,19 @@ class MyApp extends StatelessWidget {
           builder: (context, state) => const HomeScreen(),
         ),
         GoRoute(
-          path: '/calendar',  // CalendarScreen rotası buraya eklenmiş olmalı
+          path: '/calendar',
           builder: (context, state) => const CalendarScreen(),
+        ),
+        GoRoute(
+          path: '/mood',
+          builder: (context, state) => const MoodScreen(),
         ),
       ],
     );
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routerConfig: _router,  // GoRouter yapılandırması burada kullanılıyor
+      routerConfig: _router,
     );
   }
 }

@@ -22,7 +22,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
     selectedEvents = {};
   }
 
-  // Takvime işaretleme yapacak fonksiyon
   void _onDaySelected(DateTime day, DateTime focusedDay) {
     setState(() {
       selectedDay = day;
@@ -30,12 +29,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
     });
   }
 
-  // Takvime veri ekleme fonksiyonu
   List<Event> _getEventsForDay(DateTime day) {
     return selectedEvents[day] ?? [];
   }
 
-  // Etkinlik eklemek için fonksiyon
   void _addEvent() {
     showDialog(
       context: context,
@@ -81,15 +78,14 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          '../assets/logoo.png', // Logo dosyasının doğru yolu
-          height: 40,  // Logonun yüksekliğini ayarlayabilirsiniz
+          '../assets/logoo.png',
+          height: 40,
         ),
-        backgroundColor: Colors.white,  // AppBar'ın arka plan rengini beyaz yapıyoruz
-        elevation: 0,  // AppBar altındaki gölgeyi kaldırıyoruz
+        backgroundColor: Colors.white,
+        elevation: 0,
       ),
       body: Column(
         children: [
-          // Takvim widget'ı
           TableCalendar(
             firstDay: DateTime.utc(2020, 01, 01),
             lastDay: DateTime.utc(2030, 12, 31),
@@ -99,11 +95,11 @@ class _CalendarScreenState extends State<CalendarScreen> {
             eventLoader: _getEventsForDay,
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Colors.grey, // Bugün günü vurgulamak için
+                color: Colors.grey,
                 shape: BoxShape.circle,
               ),
               selectedDecoration: BoxDecoration(
-                color: Colors.redAccent, // Seçilen günün rengi
+                color: Colors.redAccent,
                 shape: BoxShape.circle,
               ),
               outsideDecoration: BoxDecoration(
@@ -128,7 +124,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
             ),
           ),
-          // Seçilen günde gösterilecek etkinlikler
           Expanded(
             child: ListView(
               children: _getEventsForDay(selectedDay)
@@ -148,29 +143,26 @@ class _CalendarScreenState extends State<CalendarScreen> {
             IconButton(
               icon: const Icon(Icons.home),
               onPressed: () {
-                // Ana sayfaya git
                 context.go('/home');
               },
             ),
             IconButton(
               icon: const Icon(Icons.calendar_today),
               onPressed: () {
-                // Takvim ekranına git
                 context.go('/calendar');
               },
             ),
             IconButton(
               icon: const Icon(Icons.mood),
               onPressed: () {
-                // Mood veya başka bir işlev ekleyebilirsiniz
-                print("Mood butonuna tıklandı!");
+                context.go('/mood');
               },
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _addEvent, // Etkinlik ekle butonuna tıklayınca bu fonksiyon çalışacak
+        onPressed: _addEvent,
         backgroundColor: Colors.grey,
         child: const Icon(Icons.add),
       ),
@@ -178,7 +170,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   }
 }
 
-// Takvimdeki her bir gün için etkinlik sınıfı
 class Event {
   final String title;
 
