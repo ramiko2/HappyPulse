@@ -104,7 +104,7 @@ lib/
 
 ├── modeller/ # Veri modelleri
 
-├── ekranlar/ # Uygulama ekranları
+├── ekranlar/ # Uygulama ekranlar
 
 ├── widgets/ # Tekrar kullanılabilir arayüz öğeleri
 
