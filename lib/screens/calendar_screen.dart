@@ -78,7 +78,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          '../assets/logoo.png',
+          'assets/logoo.png',
           height: 40,
         ),
         backgroundColor: Colors.white,
@@ -100,10 +100,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
               ),
               selectedDecoration: BoxDecoration(
                 color: Colors.redAccent,
-                shape: BoxShape.circle,
-              ),
-              outsideDecoration: BoxDecoration(
-                color: Colors.transparent,
                 shape: BoxShape.circle,
               ),
             ),
@@ -165,6 +161,37 @@ class _CalendarScreenState extends State<CalendarScreen> {
         onPressed: _addEvent,
         backgroundColor: Colors.grey,
         child: const Icon(Icons.add),
+      ),
+      drawer: Drawer(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/home');
+                },
+                child: const Text("Ana Sayfa", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/calendar');
+                },
+                child: const Text("Takvim", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/mood');
+                },
+                child: const Text("Duygu Durumu", style: TextStyle(fontSize: 18)),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

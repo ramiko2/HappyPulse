@@ -4,6 +4,7 @@ import 'package:happypulse/screens/boarding_screen.dart';
 import 'package:happypulse/screens/home_screen.dart';
 import 'package:happypulse/screens/calendar_screen.dart';
 import 'package:happypulse/screens/mood_screen.dart';
+import 'package:happypulse/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: '/',
           builder: (context, state) => const BoardingScreen(),
+        ),
+        GoRoute(
+          path: '/login',
+          builder: (context, state) => const LoginScreen(),
         ),
         GoRoute(
           path: '/home',

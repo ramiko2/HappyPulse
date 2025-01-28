@@ -104,7 +104,11 @@ lib/
 
 ├── modeller/ # Veri modelleri
 
+<<<<<<< HEAD
 ├── ekranlar/ # Uygulama ekranlar
+=======
+├── ekranlar/ # Uygulama ekranları
+>>>>>>> 72aa079 (düzenlemeler yapıldı)
 
 ├── widgets/ # Tekrar kullanılabilir arayüz öğeleri
 

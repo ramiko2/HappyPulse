@@ -12,29 +12,19 @@ class BoardingScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              '../assets/happypulse.png',
+              'assets/happypulse.png',  // Resmin doğru yolunu kontrol edin
               width: 450,
               height: 600,
             ),
             const SizedBox(height: 40),
-            ElevatedButton(
+            // Burada sadece "Giriş Yap" butonuna tıklanacak
+            TextButton(
               onPressed: () {
-                context.go('/home');
+                context.go('/login');  // Giriş yap butonuna tıklanınca Login sayfasına yönlendir
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purple,
-                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              child: const Text(
-                'Happy Pulse',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+              child: Text(
+                'Giriş Yap',
+                style: TextStyle(color: Colors.purple), // Metin rengi
               ),
             ),
           ],

@@ -66,22 +66,33 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      drawer: const Drawer(
+      drawer: Drawer(
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Divider(),
-              Text("İLETİŞİM", style: TextStyle(fontSize: 18)),
+              TextButton(
+                onPressed: () {
+                  context.go('/home');
+                },
+                child: const Text("Ana Sayfa", style: TextStyle(fontSize: 18)),
+              ),
               Divider(),
-              Text("Rabiya Tanbaş"),
+              TextButton(
+                onPressed: () {
+                  context.go('/calendar');
+                },
+                child: const Text("Takvim", style: TextStyle(fontSize: 18)),
+              ),
               Divider(),
-              Text("rabiyatanbas@gmail.com"),
-              Divider(),
-              Text("+905308406837"),
-              Divider(),
-              Text("https://github.com/ramiko2"),
+              TextButton(
+                onPressed: () {
+                  context.go('/mood');
+                },
+                child: const Text("Duygu Durumu", style: TextStyle(fontSize: 18)),
+              ),
             ],
           ),
         ),
