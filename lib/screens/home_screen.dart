@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:happypulse/widgets/bottom_navigation_bar_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -40,52 +42,59 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        height: 60,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.home),
-              onPressed: () {
-                context.go('/home');
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.calendar_today),
-              onPressed: () {
-                context.go('/calendar');
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.mood),
-              onPressed: () {
-                context.go('/mood');
-              },
-            ),
-          ],
-        ),
-      ),
-      drawer: const Drawer(
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
+      bottomNavigationBar: const BottomNavigationBarWidget(), // Burada kullanılıyor
+        drawer: Drawer(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              UserAccountsDrawerHeader(
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                  child: Icon(
+                    CupertinoIcons.person_circle,
+                    size: 50,
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
+                  ),
+                ),
+                accountName: Text("Hoşgeldiniz"),
+                accountEmail: Text("rabiyatanbas@gmail.com"), // E-posta adresini burada ekleyebilirsiniz
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+              ListTile(
+                leading: Icon(CupertinoIcons.home),
+                title: Text('Ana Sayfa'),
+                onTap: () {
+                  context.go('/home');  // Ana sayfaya yönlendir
+                },
+              ),
+              ListTile(
+                leading: Icon(CupertinoIcons.calendar_today),
+                title: Text('Takvim'),
+                onTap: () {
+                  context.go('/calendar');  // Takvim sayfasına yönlendir
+                },
+              ),
+              ListTile(
+                leading: Icon(CupertinoIcons.smiley),
+                title: Text('Ruh Hali'),
+                onTap: () {
+                  context.go('/mood');  // Mood sayfasına yönlendir
+                },
+              ),
+              Spacer(),
               Divider(),
-              Text("İLETİŞİM", style: TextStyle(fontSize: 18)),
-              Divider(),
-              Text("Rabiya Tanbaş"),
-              Divider(),
-              Text("rabiyatanbas@gmail.com"),
-              Divider(),
-              Text("+905308406837"),
-              Divider(),
-              Text("https://github.com/ramiko2"),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Çıkış Yap'),
+                onTap: () {
+                  context.go("/login");  // Çıkış yapınca login sayfasına yönlendir
+                },
+              ),
             ],
           ),
-        ),
-      ),
+        )
+
     );
   }
 }
