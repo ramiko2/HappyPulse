@@ -22,11 +22,11 @@
 
 ## Özellikler
 
-- [Takvimde istediğin tarihi seçip döngünü not alabilirsin.]
+- [Takvimden döngünü takip edebilirsin.]
 
 - [Temayı değiştirebilirsin.]
 
-- [Duygu durumunu belirleyebilirsin.]
+- [Modunu değiştirebilirsin.]
 
 
 
