@@ -36,8 +36,6 @@
 
 - Dart
 
-- [Diğer teknolojiler]
-
 
 
 ## Başlangıç
@@ -49,8 +47,6 @@
 - Flutter SDK (sürüm 3.24.5)
 
 - Dart SDK (sürüm  3.5.4)
-
-- [Diğer gerekli yazılımlar]
 
 
 
@@ -104,13 +100,9 @@ lib/
 
 ├── modeller/ # Veri modelleri
 
-<<<<<<< HEAD
-├── ekranlar/ # Uygulama ekranlar
-=======
-├── ekranlar/ # Uygulama ekranları
->>>>>>> 72aa079 (düzenlemeler yapıldı)
+├── ekranlar/BoardingScreen/LoginScreen/HomeScreen/CalendarScreen/MoodScreen
 
-├── widgets/ # Tekrar kullanılabilir arayüz öğeleri
+├── widgets/ BottomNavigationBarWidget
 
 ├── servisler/ # API servisleri
 
@@ -122,7 +114,28 @@ lib/
 
 ## Ekran Görüntüleri
 
-[Uygulama ekran görüntüleri buraya eklenecek]
+
+happypulse/
+├── assets/
+│   └── images/
+│       └── a.png
+├── README.md
+happypulse/
+├── assets/
+│   └── images/
+│       └── b.png
+├── README.md
+happypulse/
+├── assets/
+│   └── images/
+│       └── c.png
+├── README.md
+happypulse/
+├── assets/
+│   └── images/
+│       └── d.png
+├── README.md
+
 
 
 
