@@ -16,7 +16,7 @@
 ## Ekibimiz
 
 -  **Danışman:**  
-   [https://github.com/ramiko2](Rabiya Tanbaş)
+   [https://github.com/ramiko2](ramiko2)
 
 
 
