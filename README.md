@@ -112,29 +112,17 @@ lib/
 
 
 
+
 ## Ekran Görüntüleri
 
+![Ekran Görüntüsü 1](assets/images/a.png)
 
-happypulse/
-├── assets/
-│   └── images/
-│       └── a.png
-├── README.md
-happypulse/
-├── assets/
-│   └── images/
-│       └── b.png
-├── README.md
-happypulse/
-├── assets/
-│   └── images/
-│       └── c.png
-├── README.md
-happypulse/
-├── assets/
-│   └── images/
-│       └── d.png
-├── README.md
+![Ekran Görüntüsü 2](assets/images/b.png)
+
+![Ekran Görüntüsü 3](assets/images/c.png)
+
+![Ekran Görüntüsü 4](assets/images/d.png)
+
 
 
 
