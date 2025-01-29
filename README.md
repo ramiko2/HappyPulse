@@ -92,23 +92,17 @@ flutter  run
 
 
 
-## Proje Yapısı
-
-```
-
 lib/
 
-├── modeller/ # Veri modelleri
+├── modeller/ # Veri modelleri ve API veri yapıları │ ├── user.dart # Kullanıcı modelini tanımlar │ ├── cycle.dart # Regl döngüsü modeli │ └── mood.dart # Ruh hali modeli
 
-├── ekranlar/BoardingScreen/LoginScreen/HomeScreen/CalendarScreen/MoodScreen
+├── ekranlar/ # Uygulamanın ekranları │ ├── BoardingScreen/ # Uygulama açılış ekranı │ ├── LoginScreen/ # Kullanıcı giriş ekranı │ ├── HomeScreen/ # Ana ekran │ ├── CalendarScreen/ # Regl takvim ekranı │ ├── MoodScreen/ # Ruh hali ekranı │ └── SettingsScreen/ # Uygulama ayarları ekranı
 
-├── widgets/ BottomNavigationBarWidget
+├── widgets/ # Tekrar kullanılabilir bileşenler │ ├── BottomNavigationBarWidget/ # Alt navigasyon çubuğu │ ├── CustomButton/ # Özelleştirilmiş buton │ └── CalendarCard/ # Takvim kartı bileşeni
 
-├── servisler/ # API servisleri
+├── servisler/ # API servisleri ve veri yönetimi │ ├── api_service.dart # API bağlantılarını yöneten servis │ └── auth_service.dart # Kullanıcı doğrulama servisi
 
-└── yardımcılar/ # Yardımcı fonksiyonlar
-
-```
+└── yardımcılar/ # Yardımcı fonksiyonlar ├── date_utils.dart # Tarih hesaplama fonksiyonları ├── validation.dart # Giriş doğrulama fonksiyonları └── theme.dart # Tema ayarları dosyası
 
 
 
@@ -149,7 +143,7 @@ lib/
 
 ## İletişim
 
-- Proje Bağlantısı: [git@github.com:ramiko2/HappyPulse.git]
+- Proje Bağlantısı: (https://github.com/ramiko2/HappyPulse)
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
