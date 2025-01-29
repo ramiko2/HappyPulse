@@ -42,8 +42,40 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+<<<<<<< HEAD
       bottomNavigationBar: const BottomNavigationBarWidget(), // Burada kullanılıyor
         drawer: Drawer(
+=======
+      bottomNavigationBar: Container(
+        height: 60,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.home),
+              onPressed: () {
+                context.go('/home');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.calendar_today),
+              onPressed: () {
+                context.go('/calendar');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.mood),
+              onPressed: () {
+                context.go('/mood');
+              },
+            ),
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+>>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
           child: Column(
             children: [
               UserAccountsDrawerHeader(
@@ -84,12 +116,34 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Spacer(),
               Divider(),
+<<<<<<< HEAD
               ListTile(
                 leading: Icon(Icons.logout),
                 title: Text('Çıkış Yap'),
                 onTap: () {
                   context.go("/login");  // Çıkış yapınca login sayfasına yönlendir
                 },
+=======
+              TextButton(
+                onPressed: () {
+                  context.go('/home');
+                },
+                child: const Text("Ana Sayfa", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/calendar');
+                },
+                child: const Text("Takvim", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/mood');
+                },
+                child: const Text("Duygu Durumu", style: TextStyle(fontSize: 18)),
+>>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
               ),
             ],
           ),

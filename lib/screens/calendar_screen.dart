@@ -34,7 +34,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Image.asset(
-          '../assets/logoo.png',
+          'assets/logoo.png',
           height: 40,
         ),
         backgroundColor: Colors.white,
@@ -57,10 +57,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
                 color: Colors.purple,
                 shape: BoxShape.circle,
               ),
-              outsideDecoration: BoxDecoration(
-                color: Colors.transparent,
-                shape: BoxShape.circle,
-              ),
             ),
             headerStyle: HeaderStyle(
               formatButtonVisible: false,
@@ -74,7 +70,72 @@ class _CalendarScreenState extends State<CalendarScreen> {
           // Diğer içerikler burada
         ],
       ),
+<<<<<<< HEAD
       bottomNavigationBar: const BottomNavigationBarWidget(),
+=======
+      bottomNavigationBar: Container(
+        height: 60,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              icon: const Icon(Icons.home),
+              onPressed: () {
+                context.go('/home');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.calendar_today),
+              onPressed: () {
+                context.go('/calendar');
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.mood),
+              onPressed: () {
+                context.go('/mood');
+              },
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _addEvent,
+        backgroundColor: Colors.grey,
+        child: const Icon(Icons.add),
+      ),
+      drawer: Drawer(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/home');
+                },
+                child: const Text("Ana Sayfa", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/calendar');
+                },
+                child: const Text("Takvim", style: TextStyle(fontSize: 18)),
+              ),
+              Divider(),
+              TextButton(
+                onPressed: () {
+                  context.go('/mood');
+                },
+                child: const Text("Duygu Durumu", style: TextStyle(fontSize: 18)),
+              ),
+            ],
+          ),
+        ),
+      ),
+>>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
     );
   }
 }
