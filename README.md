@@ -92,17 +92,19 @@ flutter  run
 
 
 
+## Proje Yapısı
+
 lib/
 
-├── modeller/ # Veri modelleri ve API veri yapıları │ ├── user.dart # Kullanıcı modelini tanımlar │ ├── cycle.dart # Regl döngüsü modeli │ └── mood.dart # Ruh hali modeli
+├── modeller/ # Veri modelleri
 
-├── ekranlar/ # Uygulamanın ekranları │ ├── BoardingScreen/ # Uygulama açılış ekranı │ ├── LoginScreen/ # Kullanıcı giriş ekranı │ ├── HomeScreen/ # Ana ekran │ ├── CalendarScreen/ # Regl takvim ekranı │ ├── MoodScreen/ # Ruh hali ekranı │ └── SettingsScreen/ # Uygulama ayarları ekranı
+├── ekranlar/BoardingScreen/LoginScreen/HomeScreen/CalendarScreen/MoodScreen
 
-├── widgets/ # Tekrar kullanılabilir bileşenler │ ├── BottomNavigationBarWidget/ # Alt navigasyon çubuğu │ ├── CustomButton/ # Özelleştirilmiş buton │ └── CalendarCard/ # Takvim kartı bileşeni
+├── widgets/ BottomNavigationBarWidget
 
-├── servisler/ # API servisleri ve veri yönetimi │ ├── api_service.dart # API bağlantılarını yöneten servis │ └── auth_service.dart # Kullanıcı doğrulama servisi
+├── servisler/ # API servisleri
 
-└── yardımcılar/ # Yardımcı fonksiyonlar ├── date_utils.dart # Tarih hesaplama fonksiyonları ├── validation.dart # Giriş doğrulama fonksiyonları └── theme.dart # Tema ayarları dosyası
+└── yardımcılar/ # Yardımcı fonksiyonlar
 
 
 
