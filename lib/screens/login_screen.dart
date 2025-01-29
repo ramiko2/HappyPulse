@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-=======
-import 'package:flutter/material.dart';
->>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
 import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -23,11 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
     if (epostaYonetici.text.isEmpty || sifreYonetici.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-<<<<<<< HEAD
-          content: Text("Bilgilerinizi Giriniz"),
-=======
           content: Text("Bilgileriniz Giriniz"),
->>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
           behavior: SnackBarBehavior.floating,
           backgroundColor: Colors.red,
           showCloseIcon: true,
@@ -37,11 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
       if (sifreYonetici.text.length < 8) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-<<<<<<< HEAD
-            content: Text("Şifre minimum 8 haneli olmalıdır."),
-=======
             content: Text("Şifre Minimum 8 haneli olabilir."),
->>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
             behavior: SnackBarBehavior.floating,
             backgroundColor: Colors.red,
             showCloseIcon: true,

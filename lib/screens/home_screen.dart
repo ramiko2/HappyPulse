@@ -42,40 +42,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-<<<<<<< HEAD
-      bottomNavigationBar: const BottomNavigationBarWidget(), // Burada kullanılıyor
-        drawer: Drawer(
-=======
-      bottomNavigationBar: Container(
-        height: 60,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: const Icon(Icons.home),
-              onPressed: () {
-                context.go('/home');
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.calendar_today),
-              onPressed: () {
-                context.go('/calendar');
-              },
-            ),
-            IconButton(
-              icon: const Icon(Icons.mood),
-              onPressed: () {
-                context.go('/mood');
-              },
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
       drawer: Drawer(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
->>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
           child: Column(
             children: [
               UserAccountsDrawerHeader(
@@ -88,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 accountName: Text("Hoşgeldiniz"),
-                accountEmail: Text("rabiyatanbas@gmail.com"), // E-posta adresini burada ekleyebilirsiniz
+                accountEmail: Text("rabiyatanbas@gmail.com"),
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.primary,
                 ),
@@ -97,58 +67,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 leading: Icon(CupertinoIcons.home),
                 title: Text('Ana Sayfa'),
                 onTap: () {
-                  context.go('/home');  // Ana sayfaya yönlendir
+                  context.go('/home');
                 },
               ),
               ListTile(
                 leading: Icon(CupertinoIcons.calendar_today),
                 title: Text('Takvim'),
                 onTap: () {
-                  context.go('/calendar');  // Takvim sayfasına yönlendir
+                  context.go('/calendar');
                 },
               ),
               ListTile(
                 leading: Icon(CupertinoIcons.smiley),
                 title: Text('Ruh Hali'),
                 onTap: () {
-                  context.go('/mood');  // Mood sayfasına yönlendir
+                  context.go('/mood');
                 },
               ),
               Spacer(),
               Divider(),
-<<<<<<< HEAD
-              ListTile(
-                leading: Icon(Icons.logout),
-                title: Text('Çıkış Yap'),
-                onTap: () {
-                  context.go("/login");  // Çıkış yapınca login sayfasına yönlendir
-                },
-=======
               TextButton(
                 onPressed: () {
-                  context.go('/home');
+                  context.go('/login');
                 },
-                child: const Text("Ana Sayfa", style: TextStyle(fontSize: 18)),
-              ),
-              Divider(),
-              TextButton(
-                onPressed: () {
-                  context.go('/calendar');
-                },
-                child: const Text("Takvim", style: TextStyle(fontSize: 18)),
-              ),
-              Divider(),
-              TextButton(
-                onPressed: () {
-                  context.go('/mood');
-                },
-                child: const Text("Duygu Durumu", style: TextStyle(fontSize: 18)),
->>>>>>> 8671fbf9d52603c2800aa7cb4fd38f47f3dc1421
+                child: const Text("Çıkış Yap", style: TextStyle(fontSize: 18)),
               ),
             ],
           ),
-        )
-
+        ),
+      ),
     );
   }
 }
