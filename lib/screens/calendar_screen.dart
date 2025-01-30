@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:happypulse/widgets/bottom_navigation_bar_widget.dart';
+import 'package:happypulse/core/theme_provider.dart';
 
 class CalendarScreen extends StatefulWidget {
   const CalendarScreen({super.key});
@@ -37,7 +38,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           'assets/logoo.png',
           height: 40,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
       ),
       body: Column(
@@ -50,20 +51,20 @@ class _CalendarScreenState extends State<CalendarScreen> {
             onDaySelected: _onDaySelected,
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Colors.grey,
+                color: Theme.of(context).colorScheme.secondary,
                 shape: BoxShape.circle,
               ),
               selectedDecoration: BoxDecoration(
-                color: Colors.purple,
+                color: Theme.of(context).colorScheme.primary,
                 shape: BoxShape.circle,
               ),
             ),
             headerStyle: HeaderStyle(
               formatButtonVisible: false,
-              titleTextStyle: const TextStyle(
+              titleTextStyle: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.purple,
+                color: Theme.of(context).colorScheme.onPrimary,
               ),
             ),
           ),

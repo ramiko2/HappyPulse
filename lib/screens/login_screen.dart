@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:happypulse/core/theme_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -41,7 +42,14 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Image.asset(
+          'assets/logoo.png',
+          height: 40,
+        ),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        elevation: 0,
+      ),
       body: Center(
         child: SizedBox(
           width: 300,
@@ -75,11 +83,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: girisYap,
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(double.infinity, 50),
+                  backgroundColor: Theme.of(context).colorScheme.primary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
-                child: const Text("Giriş Yap", style: TextStyle(fontSize: 16)),
+                child: Text(
+                  "Giriş Yap",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Theme.of(context).colorScheme.onPrimary, // Buton metni rengini ayarladık
+                  ),
+                ),
               ),
             ],
           ),

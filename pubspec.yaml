@@ -13,6 +13,8 @@ dependencies:
   go_router: ^9.0.2
   table_calendar: ^3.0.6
   cupertino_icons: ^1.0.8
+  google_fonts: ^3.0.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
@@ -26,5 +28,3 @@ flutter:
     - assets/happypulse.png
     - assets/logoo.png
     - assets/dongu.png
-    - assets/icons/google_icon.png
-    - assets/icons/apple_icon.png

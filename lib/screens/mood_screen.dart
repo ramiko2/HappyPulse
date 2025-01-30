@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:happypulse/widgets/bottom_navigation_bar_widget.dart';
+import 'package:happypulse/core/theme_provider.dart';
 
 class MoodScreen extends StatefulWidget {
   const MoodScreen({super.key});
@@ -32,7 +33,7 @@ class _MoodScreenState extends State<MoodScreen> {
           '../assets/logoo.png',
           height: 40,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
       ),
       body: SingleChildScrollView(
@@ -52,7 +53,7 @@ class _MoodScreenState extends State<MoodScreen> {
                     Expanded(
                       child: Text(
                         moodMessages[mood]!,
-                        style: const TextStyle(fontSize: 14),
+                        style: TextStyle(fontSize: 14, color: Theme.of(context).colorScheme.onBackground),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 2,
                       ),

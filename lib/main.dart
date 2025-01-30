@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:happypulse/screens/boarding_screen.dart';
 import 'package:happypulse/screens/home_screen.dart';
 import 'package:happypulse/screens/calendar_screen.dart';
 import 'package:happypulse/screens/mood_screen.dart';
 import 'package:happypulse/screens/login_screen.dart';
+import 'package:happypulse/core/theme_provider.dart'; // Güncellenmiş dosya yolu
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +22,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GoRouter _router = GoRouter(
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
+    final GoRouter router = GoRouter(
+      initialLocation: '/', // Başlangıç ekranı olarak BoardingScreen yönlendirilir
       routes: [
         GoRoute(
           path: '/',
@@ -42,7 +52,9 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routerConfig: _router,
+      routerConfig: router,
+      theme: themeProvider.isDark ? darkTheme : lightTheme,
+      themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
     );
   }
 }
