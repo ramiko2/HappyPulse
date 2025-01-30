@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:happypulse/widgets/bottom_navigation_bar_widget.dart';
 import 'package:happypulse/core/theme_provider.dart';
+import 'package:happypulse/screens/settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -103,6 +104,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: const Text('Ruh Hali'),
                 onTap: () {
                   context.go('/mood');
+                },
+              ),
+              ListTile(
+                leading: const Icon(CupertinoIcons.settings),
+                title: const Text('Ayarlar'),
+                onTap: () {
+                  context.go('/settings');
                 },
               ),
               const Spacer(),

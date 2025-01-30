@@ -6,7 +6,8 @@ import 'package:happypulse/screens/home_screen.dart';
 import 'package:happypulse/screens/calendar_screen.dart';
 import 'package:happypulse/screens/mood_screen.dart';
 import 'package:happypulse/screens/login_screen.dart';
-import 'package:happypulse/core/theme_provider.dart'; // Güncellenmiş dosya yolu
+import 'package:happypulse/core/theme_provider.dart';
+import 'package:happypulse/screens/settings_screen.dart';
 
 void main() {
   runApp(
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     final GoRouter router = GoRouter(
-      initialLocation: '/', // Başlangıç ekranı olarak BoardingScreen yönlendirilir
+      initialLocation: '/',
       routes: [
         GoRoute(
           path: '/',
@@ -38,6 +39,10 @@ class MyApp extends StatelessWidget {
         GoRoute(
           path: '/home',
           builder: (context, state) => const HomeScreen(),
+        ),
+        GoRoute(
+          path: '/settings',
+          builder: (context, state) => const SettingsScreen(),
         ),
         GoRoute(
           path: '/calendar',
