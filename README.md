@@ -16,9 +16,9 @@ Projemin adı HappyPulse. Regl takip uygulaması gibi düşünebilirsiniz. Bu pr
 ## Ekibimiz
 
 -  **Danışman:**
--  [https://github.com/keyvanarasteh](Keyvan Arasteh)
+-  [https://github.com/keyvanarasteh] (Keyvan Arasteh)
 -  **Takım Lideri**
-   [https://github.com/ramiko2](ramiko2)
+   [https://github.com/ramiko2] (ramiko2)
 
 
 
