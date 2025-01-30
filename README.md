@@ -15,7 +15,9 @@
 
 ## Ekibimiz
 
--  **Danışman:**  
+-  **Danışman:**
+-  [https://github.com/keyvanarasteh](Keyvan Arasteh)
+-  **Takım Lideri**
    [https://github.com/ramiko2](ramiko2)
 
 
@@ -30,24 +32,21 @@
 
 
 
-## Kullanılan Teknolojiler
-
-- Flutter
-
-- Dart
-
-
-
-## Başlangıç
-
-
-
 ### Gereksinimler
 
 - Flutter SDK (sürüm 3.24.5)
 
 - Dart SDK (sürüm  3.5.4)
 
+- Go_router (sürüm 9.0.2)
+  
+- Table_calendar (sürüm 3.0.6)
+  
+- Cupertino_icons (sürüm 1.0.8)
+  
+- Google_fonts (sürüm 3.0.1)
+
+- Provider (sürüm 6.1.2)
 
 
 ### Kurulum Adımları
