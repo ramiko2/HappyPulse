@@ -3,32 +3,32 @@
 
 
 
-![İstinye Üniversitesi](https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
+!İstinye Üniversitesi(https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
 
 
 
 ## Proje Hakkında
 
-[Projemin adı HappyPulse. Regl takip uygulaması gibi düşünebilirsiniz. Bu projeyle regl döngüsünün başlamasına ne kadar zaman kaldığını kolayca hesaplayabilir ve modunu seçebilirsin.]
+Projemin adı HappyPulse. Regl takip uygulaması gibi düşünebilirsiniz. Bu projeyle regl döngüsünün başlamasına ne kadar zaman kaldığını kolayca hesaplayabilir ve modunu seçebilirsin.
 
 
 
 ## Ekibimiz
 
 -  **Danışman:**
--  [https://github.com/keyvanarasteh](Keyvan Arasteh)
+-  https://github.com/keyvanarasteh(Keyvan Arasteh)
 -  **Takım Lideri**
-   [https://github.com/ramiko2](ramiko2)
+   https://github.com/ramiko2(ramiko2)
 
 
 
 ## Özellikler
 
-- [Takvimden döngünü takip edebilirsin.]
+- Takvimden döngünü takip edebilirsin.
 
-- [Temayı değiştirebilirsin.]
+- Temayı değiştirebilirsin.
 
-- [Modunu değiştirebilirsin.]
+- Modunu değiştirebilirsin.
 
 
 
@@ -152,9 +152,9 @@ lib/
 
 ## Teşekkürler
 
-- İstinye Üniversitesi'ne destekleri için teşekkür ederiz
+- İstinye Üniversitesi'ne destekleri için teşekkür ederiz.
 
-- [Keyvan Hocaya teşekkürler.]
+- Keyvan Hocaya teşekkürler.
 
 
 
