@@ -110,14 +110,11 @@ lib/
 
 ## Ekran Görüntüleri
 
-![Ekran Görüntüsü 1](assets/images/a.png)
-
-![Ekran Görüntüsü 2](assets/images/b.png)
-
-![Ekran Görüntüsü 3](assets/images/c.png)
-
-![Ekran Görüntüsü 4](assets/images/d.png)
-
+<img src="assets/images/a.png" width="300"/>
+<img src="assets/images/b.png" width="300"/>
+<img src="assets/images/c.png" width="300"/>
+<img src="assets/images/d.png" width="300"/>
+<img src="assets/images/e.png" width="300"/>
 
 
 
