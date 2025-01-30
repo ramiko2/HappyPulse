@@ -28,7 +28,7 @@ Projemin adı HappyPulse. Regl takip uygulaması gibi düşünebilirsiniz. Bu pr
 
 - Temayı değiştirebilirsin.
 
-- Modunu değiştirebilirsin.
+- Ruh halini belirleyebilirsin.
 
 
 
